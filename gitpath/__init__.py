@@ -1,5 +1,8 @@
 from subprocess import check_output, CalledProcessError
-from functools import lru_cache
+try:
+    from functools import lru_cache
+except ImportError:
+    from backports.functools_lru_cache import lru_cache
 import os.path
 
 
